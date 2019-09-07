@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "src": "../../assets/imgs/prod1.jpg",
-        "listSrc": "../../assets/imgs/prod1-L.jpg",
+        "src": "./assets/imgs/prod1.jpg",
+        "listSrc": "./assets/imgs/prod1-L.jpg",
         "name": "Grilled Chicken",
         "category": "Chicken",
         "price": 50,
@@ -12,8 +12,8 @@
     },
     {
         "id": 2,
-        "src": "../../assets/imgs/prod2.jpg",
-        "listSrc": "../../assets/imgs/prod2-L.jpg",
+        "src": "./assets/imgs/prod2.jpg",
+        "listSrc": "./assets/imgs/prod2-L.jpg",
         "name": "Oven Pasta",
         "category": "Pasta",
         "price": 30,
@@ -23,8 +23,8 @@
     },
     {
         "id": 3,
-        "src": "../../assets/imgs/prod3.jpg",
-        "listSrc": "../../assets/imgs/prod3-L.jpg",
+        "src": "./assets/imgs/prod3.jpg",
+        "listSrc": "./assets/imgs/prod3-L.jpg",
         "name": "Grilled Meat",
         "category": "Meat",
         "price": 70,
@@ -34,8 +34,8 @@
     },
     {
         "id": 4,
-        "src": "../../assets/imgs/prod4.jpg",
-        "listSrc": "../../assets/imgs/prod4-L.jpg",
+        "src": "./assets/imgs/prod4.jpg",
+        "listSrc": "./assets/imgs/prod4-L.jpg",
         "name": "Red Berry smoothie",
         "category": "Drinks",
         "price": 50,
@@ -45,8 +45,8 @@
     },
     {
         "id": 5,
-        "src": "../../assets/imgs/prod5.jpg",
-        "listSrc": "../../assets/imgs/prod5-L.jpg",
+        "src": "./assets/imgs/prod5.jpg",
+        "listSrc": "./assets/imgs/prod5-L.jpg",
         "name": "Chicken Pane",
         "category": "Chicken",
         "price": 40,
@@ -56,8 +56,8 @@
     },
     {
         "id": 6,
-        "src": "../../assets/imgs/prod6.jpg",
-        "listSrc": "../../assets/imgs/prod6-L.jpg",
+        "src": "./assets/imgs/prod6.jpg",
+        "listSrc": "./assets/imgs/prod6-L.jpg",
         "name": "Shrimp",
         "category": "Sea food",
         "price": 80,
@@ -67,8 +67,8 @@
     },
     {
         "id": 7,
-        "src": "../../assets/imgs/prod7.jpg",
-        "listSrc": "../../assets/imgs/prod7-L.jpg",
+        "src": "./assets/imgs/prod7.jpg",
+        "listSrc": "./assets/imgs/prod7-L.jpg",
         "name": "Fruit Salad",
         "category": "Snacks",
         "price": 40,
@@ -78,8 +78,8 @@
     },
     {
         "id": 8,
-        "src": "../../assets/imgs/prod8.jpg",
-        "listSrc": "../../assets/imgs/prod8-L.jpg",
+        "src": "./assets/imgs/prod8.jpg",
+        "listSrc": "./assets/imgs/prod8-L.jpg",
         "name": "Pan cake",
         "category": "Desserts",
         "price": 30,
