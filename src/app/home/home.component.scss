@@ -1,0 +1,19 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+section.home{
+    .btn-group label.btn{
+        z-index: 0;
+        padding: 0;
+    }
+    .btn{
+        transition: none;
+        
+        &:focus{
+            @include boxShadow (none);
+        }
+    }
+    .category{
+        color: $secondaryColor; 
+    }
+}

@@ -1,0 +1,100 @@
+<app-header></app-header>
+<section class="home">
+  <div class="container">
+    <h1>Featured Meals</h1>
+    <hr class="right mb-5">
+    <div class="row mb-4">
+      <!-- ============ search input =============== -->
+      <div class="col-md-11">
+        <div class="input-group mb-2">
+          <input type="search" class="form-control col-md-12 p-2 border-right-0" placeholder="Search for product" type="search" name="search"
+            [(ngModel)]="search">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-transparent border-left-0 rounded-right">
+              <i class="icon-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <!-- =========== list button to appear when grid is displayed ============ -->
+        <div class="btn-group btn-group-toggle" *ngIf=" model.right ">
+          <label ngbButtonLabel>
+            <button class="btn" (click)="model.right = ! model.right">
+              <i class="icon-menu"></i>
+            </button>
+            <input type="checkbox" ngbButton [(ngModel)]="model.right">
+          </label>
+        </div>
+        <!-- =========== grid button to appear when list is displayed ============ -->
+        <div class="btn-group btn-group-toggle" *ngIf=" ! model.right ">
+          <label ngbButtonLabel>
+            <button class="btn" (click)="model.right = ! model.right">
+              <i class=" icon-th-large"></i>
+            </button>
+            <input type="checkbox" ngbButton [(ngModel)]="model.right">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- ================== grid item view ================== -->
+    <div class="row" *ngIf="model.right">
+      <div class="col-md-4" *ngFor="let items of productData | search:'name': search">
+        <div class="card mb-5 box-shadow">
+          <a class="img-over" routerLink="/singleitem/{{(items.name).replace(' ','-')}}">
+            <div class="overlay-parent">
+              <div class="overlay-layer align-items-center justify-content-center">
+                <div class="text-center">
+                  <i class="icon-zoom-in p-4"></i>
+                </div>
+              </div>
+              <img class="card-img-top" *ngIf="items.src" src="{{items.src}}" alt="Card image cap">
+            </div>
+          </a>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h4 class="card-title">{{items.name}}</h4>
+              <h5>{{items.price}} EGP</h5>
+            </div>
+            <h6 class="category">Category: {{items.category}}</h6>
+          </div>
+          <div class="mb-3 mr-3 text-right">
+            <button (click)="addToCart(items.id)" class="btn">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============== list item view ================ -->
+    <div class="row mb-4" *ngIf="!model.right">
+      <div class="col-md-12" *ngFor="let items of productData | search:'name': search">
+        <div class="media mt-4 mb-5 box-shadow">
+          <a class="img-over mr-3" routerLink="/singleitem/{{(items.name).replace(' ','-')}}">
+            <div class="overlay-parent">
+              <div class="overlay-layer align-items-center justify-content-center">
+                <div class="text-center">
+                  <i class="icon-zoom-in p-4"></i>
+                </div>
+              </div>
+              <img class="card-img-top" *ngIf="items.listSrc" src="{{items.listSrc}}" alt="Card image cap">
+            </div>
+          </a>
+          <div class="media-body">
+            <div>
+              <div class="d-flex justify-content-between pr-3">
+                <h4>{{items.name}}</h4>
+                <h5>{{items.price}} EGP</h5>
+              </div>
+              <h6>Category: {{items.category}}</h6>
+              <p>{{items.shortDesc}}</p>
+            </div>
+            <div>
+              <button (click)="addToCart(items.id)" class="btn mt-5 ">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>
