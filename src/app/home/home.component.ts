@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
   //============ get data from json file ==========
   getProductData(): void {
-    let path: string = '../../assets/productList.json';
+    let path: string = './assets/productList.json';
     this.query.getData(path).subscribe(
       res => {
         console.log(res);
